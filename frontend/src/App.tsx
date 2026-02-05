@@ -1,8 +1,13 @@
+import { Routes, Route } from 'react-router-dom'
+import { Dashboard } from './pages/Dashboard'
+import { AssetDetail } from './pages/AssetDetail'
+
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <h1 className="text-2xl font-bold p-4">Stock Market Dashboard</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/asset/:type/:symbol" element={<AssetDetail />} />
+    </Routes>
   )
 }
 
